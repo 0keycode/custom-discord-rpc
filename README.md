@@ -94,6 +94,8 @@ code --install-extension *.vsix
 
 ```
 custom-discord-rpc/
+├──.vscode/
+├────/launch.json
 ├── extension.js          # Основной код
 ├── package.json          # Манифест расширения
 ├── node_modules/         # Зависимости
