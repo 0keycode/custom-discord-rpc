@@ -28,8 +28,8 @@ Method 2: Build from source
 bash
 
 # Clone repository
-git clone https://github.com/your-username/my-discord-rpc.git
-cd my-discord-rpc
+git clone https://github.com/0keycode/custom-discord-rpc.git
+cd custom-discord-rpc
 
 # Install dependencies
 npm install
@@ -39,7 +39,7 @@ npm install -g @vscode/vsce
 vsce package
 
 # Install
-code --install-extension my-custom-discord-rpc-1.0.0.vsix
+code --install-extension custom-discord-rpc-1.0.0.vsix
 
 ⚙️ Configuration
 Discord App Setup
@@ -87,7 +87,7 @@ Just install and start coding! The extension will automatically:
 📦 Project Structure
 text
 
-my-discord-rpc/
+custom-discord-rpc/
 ├── extension.js          # Main extension code
 ├── package.json          # Extension manifest
 ├── node_modules/         # Dependencies
