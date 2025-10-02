@@ -1,115 +1,115 @@
-My Discord RPC
+# Discord RPC для VSCode 🚀
 
-Custom Discord Rich Presence extension for Visual Studio Code. Shows your current project, file, and programming language in Discord status.
-✨ Features
+Кастомная интеграция Discord Rich Presence для Visual Studio Code, которая показывает чем ты кодишь в реальном времени.
 
-    Project time tracking - shows how long you've been working in the current project
+## ✨ Возможности
 
-    Automatic language detection - changes icon based on programming language
+- ⏱️ **Отслеживание времени** - Видно сколько времени работаешь над проектом
+- 🔮 **Автоопределение языка** - Умное переключение иконок
+- 📄 **Чистый вид файлов** - Только имена, без путей
+- 🎭 **Приватный режим** - Скрывает детали когда нужно
+- ⚡ **Лёгкий** - Минимальное влияние на производительность
 
-    File name only - shows only filename without path
+## 🚀 Установка
 
-    Anonymous mode - hides all data, shows only working time
+### Быстрая установка
+1. Скачай последний `.vsix` из [Релизов](https://github.com/0keycode/custom-discord-rpc)
+2. В VSCode: `Ctrl+Shift+X` → `...` → `Install from VSIX`
+3. Выбери скачанный файл
+4. Перезапусти VSCode
 
-    Support for all popular languages + txt files
+### Настройка Discord
+1. Создай приложение в [Discord Developer Portal](https://discord.com/developers/applications)
+2. Скопируй **Application ID**
+3. В `extension.js` замени:
+   ```javascript
+   const clientId = "ТВОЙ_APP_ID";
+   ```
+4. Загрузи иконки в **Rich Presence → Art Assets**:
+   - Обязательные: `vscode`, `lock_icon`, `text`
+   - Языки: `python_icon`, `javascript_icon`, `typescript_icon` и т.д.
 
-🚀 Installation
-Method 1: Install from VSIX
+## ⚙️ Настройки
 
-    Download .vsix file from releases
+Открой настройки (`Ctrl+,`) и найди "Discord RPC":
 
-    In VSCode: Extensions → ... → Install from VSIX
+| Настройка | Описание | По умолчанию |
+|-----------|----------|--------------|
+| `Анонимный режим` | Скрывает имена файлов и проектов | `false` |
 
-    Select downloaded file
+## 🗃️ Поддерживаемые языки
 
-    Restart VSCode
+- **Python, JavaScript, TypeScript, Java, C++**
+- **HTML, CSS, Rust, Go, JSON**
+- **Markdown, YAML, XML, Текстовые файлы**
 
-Method 2: Build from source
-bash
+## 🛠️ Сборка из исходников
 
-# Clone repository
-git clone https://github.com/0keycode/custom-discord-rpc.git
+```bash
+# Клонируй репозиторий
+git clone https://github.com/0keycode/custom-discord-rpc
 cd custom-discord-rpc
 
-# Install dependencies
+# Установи зависимости
 npm install
 
-# Build extension
+# Установи сборщик
 npm install -g @vscode/vsce
+
+# Собери расширение
 vsce package
 
-# Install
-code --install-extension custom-discord-rpc-1.0.0.vsix
+# Установи локально
+code --install-extension *.vsix
+```
 
-⚙️ Configuration
-Discord App Setup
+## ❗ Решение проблем
 
-    Go to Discord Developer Portal
+**Статус не появляется?**
+- Убедись что Discord запущен
+- Проверь что Application ID совпадает
+- Открой консоль: `Help → Toggle Developer Tools`
 
-    Create new application
+**Иконки не грузятся?**
+- Подожди 1-2 часа для кеша Discord
+- Убедись что названия картинок совпадают точно
 
-    Copy "Application ID" from "General Information"
+**Расширение не работает?**
+- Перезапусти и VSCode и Discord
+- Проверь настройки расширения
 
-    Upload images in "Rich Presence" → "Art Assets":
+## 🎯 Использование
 
-Required images:
+Просто установи и начинай кодить! Расширение автоматически:
+- Определит твой текущий проект
+- Покажет текущий файл
+- Отобразит иконку языка программирования
+- Будет отслеживать время в проекте
 
-    vscode - main VSCode icon
+## 🏗️ Разработка
 
-    lock_icon - lock icon for anonymous mode
+Для отладки нажми `F5` в VSCode - откроется окно для разработки расширений.
 
-    text - default text icon
+## 📦 Структура проекта
 
-Language icons (optional):
-
-    python_icon, javascript_icon, typescript_icon, java_icon, cpp_icon
-
-    html_icon, css_icon, rust_icon, go_icon, text_icon
-
-VSCode Settings
-
-Open Settings (Ctrl+,) and find "My Discord RPC":
-
-    Anonymous Mode - hide file names and project info
-
-🎯 Usage
-
-Just install and start coding! The extension will automatically:
-
-    Detect your current project
-
-    Show current file name
-
-    Display programming language icon
-
-    Track time spent in project
-
-📦 Project Structure
-text
-
+```
 custom-discord-rpc/
-├── extension.js          # Main extension code
-├── package.json          # Extension manifest
-├── node_modules/         # Dependencies
-└── README.md            # This file
+├── extension.js          # Основной код
+├── package.json          # Манифест расширения
+├── node_modules/         # Зависимости
+└── README.md            # Этот файл
+```
 
-🛠️ Development
-Prerequisites
+## 🤝 Участие в разработке
 
-    Node.js
+1. Форкни проект
+2. Создай ветку для фичи (`git checkout -b feature/amazing-feature`)
+3. Закоммить изменения (`git commit -m 'Add some amazing feature'`)
+4. Запушь ветку (`git push origin feature/amazing-feature`)
+5. Открой Pull Request
 
-    Visual Studio Code
+## 📄 Лицензия
 
-    Discord
+MIT © 2025 okey
 
-Building
-bash
-
-npm install
-vsce package
-
-Testing
-
-    Press F5 to open Extension Development Host
-
-    Test functionality in new VSCode window
+---
