@@ -1,0 +1,37 @@
+{
+  "name": "my-custom-discord-rpc",
+  "displayName": "My Discord RPC",
+  "description": "Custom Discord Rich Presence for VSCode",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "My Discord RPC",
+      "properties": {
+        "myDiscordRPC.anonymousMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable anonymous mode (hide file names and project info)"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "discord-rpc": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
